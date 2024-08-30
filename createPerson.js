@@ -29,14 +29,11 @@
 // // };
 // // console.log(pessoa)
 // // pessoa["nome"]["primeiro"];
-
 // class Teste{
 //    constructor(nome, teste) {
 //       this.nome = nome;
 //       this.teste = teste;
-
 //       this.testee = function () {
-
 //       }
 //    }
 // }
@@ -58,7 +55,6 @@
 //       };
 //    }
 // }
-
 // // let pessoa = new Pessoa("Kyu", "Hayato", 24, "masculino", ["LoL", "Animes", "Programação"])
 // // let pessoa2 = new Pessoa("João", "da Silva", 33, "masculino", ["Futebol", "Cozinhar"])
 // let test = new Teste("Ola")
@@ -66,7 +62,6 @@
 // // console.log(pessoa)
 // // console.log(pessoa2)
 // console.log(pessoa3)
-
 // class Pessoa {
 //    constructor(first, last, age = 10, gender, interests) {
 //       this.name = {
@@ -86,95 +81,33 @@
 //       };
 //    }
 // }
-
 // let p1 = new Pessoa()
 // console.log(p1)
 // let p2 = new Pessoa("Brenda", "Albuquerque")
 // console.log(p2)
 // // p2.interests = ["Séries", "Filmes"]
 // // console.log(p2)
+function createPerson(name, age) {
+    let _name = name;
+    let _age = age;
 
-// class Person {
-//    constructor(name, age) {
-//       this._name = name;
-//       this._age = age;
-//    }
-
-//    // Getter para _name
-//    get name() {
-//       return this._name;
-//    }
-
-//    // Setter para _name
-//    set name(newName) {
-//       this._name = newName;
-//    }
-
-//    // Getter para _age
-//    get age() {
-//       return this._age;
-//    }
-
-//    // Setter para _age
-//    set age(newAge) {
-//       if (newAge > 0) {
-//          this._age = newAge;
-//       } else {
-//          console.log('Age must be a positivenumber.');
-// }
-//    }
-
-
-// }
-
-// const person = new Person('John', 30);
-// console.log(person.name); // John
-// person.name = 'Doe';
-// console.log(person.name); // Doe
-// console.log(person.age); // 30
-// person.age = -1; // Age must be a positive number.
-// console.log(person.age); // 30
-// person.age = 35;
-// console.log(person.age); // 35
-// import Tipo from "./new.js"
-class Person {
-   #name;
-   #age;
-
-   constructor(name, age) {
-      this.#name = name;
-      this.#age = age;
-      // this.tipo = new Tipo()
-   }
-
-   get name() {
-      return this.#name;
-   }
-
-   set name(newName) {
-      this.#name = newName;
-   }
-
-   get age() {
-      return this.#age;
-   }
-
-   set age(newAge) {
-      if (newAge > 0) {
-         this.#age = newAge;
-      } else {
-         console.log('Age must be a positivenumber.');
-      }
-   }
+    return {
+        getName: function () {
+            return _name;
+        },
+        setName: function (newName) {
+            _name = newName;
+        },
+        getAge: function () {
+            return _age;
+        },
+        setAge: function (newAge) {
+            _age = newAge;
+        }
+    };
 }
+const person = createPerson('John', 30);
+console.log(person.getName()); // John
 
-const person = new Person('John', 30);
-// console.log(person.name); // John
-// person.name = 'Doe';
-// console.log(person.name); // Doe
-// console.log(person.age); // 30
-// person.age = -1; // Age must be a positive number.
-console.log(person); // 30
-
-// person.age = 35;
-// console.log(person.age); // 35
+person.setName('Doe');
+console.log(person.getName()); // Doe
