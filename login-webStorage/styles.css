@@ -1,0 +1,13 @@
+.box-position{
+    margin-top: 200px;
+}
+.login-section{
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);;
+    padding: 30px;
+}
+.style-btn{
+    background-color: antiquewhite;
+    padding: 0;
+}
